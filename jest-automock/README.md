@@ -23,12 +23,14 @@ For a more detailed example, see below:
 ```typescript
 import { autoMock } from 'jest-automock';
 
+/* Class that will be mocked */
 class HttpClient {
   get(url) {
     // Real implementation here
   }
 }
 
+/* Consumer of mocked class - class that we are testing */
 class TodoHttpService {
   constructor(private httpClient: HttpClient) {}
 
@@ -37,6 +39,7 @@ class TodoHttpService {
   }
 }
 
+/* Test suite */
 describe('TodoHttpService', () => {
   let service: TodoHttpService, mockHttpClient: jest.Mocked<HttpClient>;
 
@@ -50,7 +53,7 @@ describe('TodoHttpService', () => {
     let result;
 
     beforeEach(() => {
-      service.getAllTodos();
+      result = service.getAllTodos();
     });
 
     it('should fetch the todos', () => {
