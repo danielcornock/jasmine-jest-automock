@@ -18,6 +18,8 @@ let mockClass = autoMock(ClassConstructor);
 
 This will replace all of the instance methods on the class provided with jest mocks, allowing you to check that those methods have been called, as well as mocking what they should return.
 
+If using TypeScript, the `autoMock` function returns a `jest.Mocked<T>` type, with `T` being the class that you passed in. This allows you to access all of the class methods, as well as the mocking methods that appear on a mocked function.
+
 For a more detailed example, see below:
 
 ```typescript
