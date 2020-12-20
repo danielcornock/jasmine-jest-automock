@@ -1,6 +1,6 @@
 {
   "name": "jest-automock",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A small library used to mock an instance of a class using jest, perfect for mocking injected dependencies.",
   "main": "dist/index.js",
   "author": "Daniel Cornock",
