@@ -22,6 +22,8 @@ If using TypeScript, the `autoMock` function returns a `jest.Mocked<T>` type, wi
 
 For a more detailed example, see below:
 
+## Example
+
 ```typescript
 import { autoMock } from 'jest-automock';
 
